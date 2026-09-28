@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="m-0 p-0">
+    <section
+      class="min-h-screen bg-green-100 px-6 py-6 md:px-20 md:py-10 flex flex-col justify-between"
+    >
+      <nav class="flex items-center justify-between">
+        <div>
+          <img
+            src="./Assests/image/logo.png"
+            alt="Reen-Bank Logo"
+            class="h-10"
+          />
+        </div>
+      </nav>
+      <div
+        class="my-auto md:flex md:items-start md:justify-between md:gap-16 py-6"
+      >
+        <div class="md:w-[50%] mb-10 md:mb-0 md:pt-4">
+          <h3 class="text-3xl font-bold text-[#33B786] md:text-4xl">
+            Reen-Bank
+          </h3>
+          <h1
+            class="mt-2 text-4xl font-bold text-black md:text-6xl leading-tight"
+          >
+            Welcome back
+          </h1>
+          <p class="mt-4 text-lg text-gray-600 md:text-2xl leading-relaxed">
+            Enter Your Details to login to your Banking Dashboard again!
+          </p>
+          <div class="flex space-x-6 text-green-600 items-center mt-8">
+            <a href="#" class="hover:opacity-80">
+              <img
+                src="./Assests/image/facebook overlay.png"
+                alt="Facebook"
+                class="w-7 h-7 object-contain"
+              />
+            </a>
+            <a href="#" class="hover:opacity-80">
+              <img
+                src="./Assests/image/instagram overlay.png"
+                alt="Instagram"
+                class="w-7 h-7 object-contain"
+              />
+            </a>
+            <a href="#" class="hover:opacity-80">
+              <img
+                src="./Assests/image/twitter overlay.png"
+                alt="Twitter"
+                class="w-7 h-7 object-contain"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="md:w-[45%]">
+          <section
+            class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md mx-auto"
+          >
+            <h3 class="text-green-600 font-bold text-3xl mb-6">Login</h3>
+            <form id="login-form" class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  name="Email"
+                  placeholder="Enter your Email"
+                  required
+                  class="w-full px-4 py-3 rounded-xl border border-gray-300 text-black placeholder-gray-400 focus:outline-none focus:border-green-500"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  for="password"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Enter your Password"
+                  required
+                  class="w-full px-4 py-3 rounded-xl border border-gray-300 text-black placeholder-gray-400 focus:outline-none focus:border-green-500"
+                />
+              </div>
+              <div class="pt-4">
+                <button
+                  type="submit"
+                  class="w-full rounded-xl bg-green-500 py-3.5 text-white font-medium hover:bg-green-600 shadow-md transition-colors text-center cursor-pointer"
+                >
+                  Login
+                </button>
+              </div>
+              <div class="pt-2 text-center">
+                <span class="text-xs sm:text-sm text-gray-500">
+                  Don't Have an Account?
+                  <a
+                    href="./get.html"
+                    class="text-green-600 font-medium hover:underline"
+                    >Register.</a
+                  >
+                </span>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </section>
+    <script src="./login.js"></script>
+  </body>
+</html>

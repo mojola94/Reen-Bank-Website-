@@ -4,31 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reen-Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <!-- Header / Hero Section -->
     <section class="bg-green-100 px-4 py-4 md:px-20">
       <nav class="flex items-center justify-between">
-        <!-- Logo -->
         <div>
           <img src="./Assests/image/logo.png" alt="Reen-Bank Logo" />
         </div>
-
-        <!-- Navigation -->
         <div class="flex space-x-6">
           <a href="#" class="text-black hover:underline">About</a>
           <a href="#" class="text-black hover:underline">Contact Us</a>
         </div>
-
-        <!-- Login -->
         <button
-          class="rounded-xl border border-green-300 bg-green-200 px-6 py-2 text-green-700 hover:bg-green-300"
+          class="rounded-xl border border-green-300 bg-green-200 px-6 py-2 text-green-700 hover:bg-green-300 cursor-pointer"
         >
-          Login
+          <a href="./Login.html">Login</a>
         </button>
       </nav>
-
-      <!-- Hero Content -->
       <section class="flex items-center justify-between py-12">
         <div class="md:w-[60%]">
           <h3 class="text-2xl font-bold text-green-600">Reen-Bank</h3>
@@ -46,14 +39,14 @@
 
           <div class="mt-6 flex space-x-4">
             <button
-              class="rounded-xl border border-green-300 bg-green-600 px-6 py-2 text-white"
+              class="rounded-xl border border-green-300 bg-green-600 px-6 py-2 text-white cursor-pointer hover:bg-green-700"
             >
-              Get started
+              <a href="./get.html">Get started</a>
             </button>
             <button
-              class="rounded-xl border border-green-300 bg-green-200 px-6 py-2 text-green-700"
+              class="rounded-xl border border-green-300 bg-green-200 px-6 py-2 text-green-700 cursor-pointer hover:bg-green-300"
             >
-              Learn More &rarr;
+              <a href="">Learn More &rarr;</a>
             </button>
           </div>
         </div>
@@ -67,12 +60,9 @@
         </div>
       </section>
     </section>
-
-    <!-- Services Section -->
     <section class="py-10 px-4 md:px-24">
       <h2 class="font-bold text-[4rem] py-6">Services</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <!-- Service 1: Savings accounts -->
         <div class="flex items-start gap-4">
           <img
             src="./Assests/image/savings 1.png"
@@ -90,8 +80,6 @@
             </p>
           </div>
         </div>
-
-        <!-- Service 2: Personal loans -->
         <div class="flex items-start gap-4">
           <img
             src="./Assests/image/personal 1.png"
@@ -109,8 +97,6 @@
             </p>
           </div>
         </div>
-
-        <!-- Service 3: Credit cards -->
         <div class="flex items-start gap-4">
           <img
             src="./Assests/image/credit-card 1.png"
@@ -128,8 +114,6 @@
             </p>
           </div>
         </div>
-
-        <!-- Service 4: Investment services -->
         <div class="flex items-start gap-4">
           <img
             src="./Assests/image/money 1.png"
@@ -149,8 +133,6 @@
             </p>
           </div>
         </div>
-
-        <!-- Service 5: Online bill pay -->
         <div class="flex items-start gap-4">
           <img
             src="./Assests/image/bill 1.png"
@@ -168,8 +150,6 @@
             </p>
           </div>
         </div>
-
-        <!-- Service 6: Business banking -->
         <div class="flex items-start gap-4">
           <img
             src="./Assests/image/deal 1.png"
@@ -190,15 +170,12 @@
         </div>
       </div>
     </section>
-
-    <!-- FAQs Section -->
     <section class="bg-green-100 py-16 px-4 md:px-24">
       <div class="mb-8">
         <h2 class="text-5xl text-black font-bold">FAQs</h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-        <!-- Left Column: Active Question & Answer -->
         <div class="space-y-6">
           <div
             class="text-3xl md:text-4xl text-green-600 font-semibold underline"
@@ -220,8 +197,6 @@
             </p>
           </div>
         </div>
-
-        <!-- Right Column: Other Questions List -->
         <div class="space-y-6 text-blue-500 font-medium text-lg">
           <div
             class="flex items-center justify-between border-b border-gray-300 pb-4"
@@ -259,16 +234,12 @@
         </div>
       </div>
     </section>
-
-    <!-- Partners / Support Section -->
     <section class="bg-white py-12 px-4 md:px-24">
       <div class="mb-8 text-center">
         <h3 class="text-2xl font-bold text-black">
           Supported by various finance services
         </h3>
       </div>
-
-      <!-- Flex container holding all logos side by side -->
       <div
         class="flex flex-wrap items-center justify-around md:justify-between gap-8"
       >
@@ -302,15 +273,10 @@
         </div>
       </div>
     </section>
-
-    <!-- Footer Section -->
     <section class="bg-green-100 py-16 px-4 md:px-24">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <!-- Left Side: Links, Brand, Copyright & Socials -->
         <div class="space-y-12">
-          <!-- Links Grid (Help & About) -->
           <div class="grid grid-cols-2 gap-8">
-            <!-- Help Column -->
             <div>
               <h4 class="text-green-600 font-bold text-xl mb-4 tracking-wider">
                 HELP
@@ -321,7 +287,6 @@
                 <li><a href="#" class="hover:underline">How to Use</a></li>
               </ul>
             </div>
-            <!-- About Column -->
             <div>
               <h4 class="text-green-600 font-bold text-xl mb-4 tracking-wider">
                 ABOUT
@@ -335,21 +300,17 @@
               </ul>
             </div>
           </div>
-
-          <!-- Brand & Copyright -->
           <div class="space-y-4">
             <div class="flex items-center space-x-3">
               <img
                 src="./Assests/image/logo.png"
-                alt=""
-                class="h-8 mt-16 md:"
+                alt="Logo"
+                class="h-8 mt-16"
               />
             </div>
             <p class="text-gray-600 text-sm">
               2023 ReenBank. All rights reserved!
             </p>
-
-            <!-- Social Icons -->
             <div class="flex space-x-4 text-green-600 items-center">
               <a href="#" class="hover:opacity-80">
                 <img
@@ -375,8 +336,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Right Side: Dark Card with Background / Email Input -->
         <div
           class="w-full md:w-[110%] bg-cover bg-center px-8 py-16 md:px-12 md:py-20 h-auto min-h-[340px] flex flex-col justify-between rounded-tl-[50px]"
           style="background-image: url(./Assests/image/Rectangle\ 159.png)"
@@ -390,8 +349,7 @@
               and Get Started Now
             </h2>
           </div>
-
-          <!-- Flex container to keep Input and Button on the same line -->
+          <!-- Removed the stray '>' bracket here -->
           <div class="flex flex-col sm:flex-row gap-3 pt-6">
             <input
               type="email"
@@ -399,7 +357,7 @@
               class="flex-1 px-4 py-3 rounded-xl bg-transparent border border-red-400/60 text-white placeholder-gray-400 focus:outline-none focus:border-green-400"
             />
             <button
-              class="rounded-xl bg-green-500 hover:bg-green-600 px-6 py-3 text-white font-medium transition-colors whitespace-nowrap"
+              class="rounded-xl bg-green-500 hover:bg-green-600 px-6 py-3 text-white font-medium transition-colors whitespace-nowrap cursor-pointer"
             >
               Get Started
             </button>
@@ -407,10 +365,10 @@
         </div>
       </div>
     </section>
-
-    <!-- Tailwind CSS CDN Script -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./dash.js"></script>
+    <script src="./Email.js"></script>
+    <script src="./get.js"></script>
+    <script src="./login.js"></script>
+    <script src="./Resend.js"></script>
   </body>
 </html>
-
-```
