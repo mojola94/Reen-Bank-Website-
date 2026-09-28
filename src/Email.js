@@ -1,3 +1,13 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const emailElement = document.getElementById("user-email");
+  const savedEmail = localStorage.getItem("registeredEmail");
+
+  if (savedEmail && emailElement) {
+    emailElement.textContent = savedEmail;
+  }
+});
+
+// 2. OTP Input Navigation
 const inputs = document.querySelectorAll("#otp-container input");
 inputs.forEach((input, index) => {
   input.addEventListener("input", (e) => {
@@ -12,7 +22,7 @@ inputs.forEach((input, index) => {
   });
 });
 
-// 2. Live Countdown Timer (45 seconds)
+// 3. Live Countdown Timer (45 seconds)
 let timeLeft = 45;
 const timerDisplay = document.getElementById("timer");
 
@@ -28,3 +38,17 @@ const countdown = setInterval(() => {
     timeLeft -= 1;
   }
 }, 1000);
+
+// 4. Handle Form Submission & Redirect to Dashboard
+const verificationForm = document.querySelector("form");
+
+if (verificationForm) {
+  verificationForm.addEventListener("submit", (e) => {
+    e.preventDefault(); // Stop default form submit behavior
+
+    // Optional: You can add validation here to check if all 6 digits are filled before redirecting
+
+    // Redirect to the dashboard page
+    window.location.href = "./dash.html";
+  });
+}
