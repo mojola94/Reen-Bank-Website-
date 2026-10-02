@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Email</title>
+    <title>Email Verification</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="m-0 p-0">
@@ -125,12 +125,13 @@
                 0:45 remaining
               </div>
               <div>
-                <button
+                <a
+                  href="./verify.html"
+                  class="block w-full rounded-xl bg-green-500 py-3.5 text-white font-medium hover:bg-green-600 shadow-md transition-colors text-center cursor-pointer"
                   type="submit"
-                  class="w-full rounded-xl bg-green-500 py-3.5 text-white font-medium hover:bg-green-600 shadow-md transition-colors text-center cursor-pointer"
                 >
                   Verify Email
-                </button>
+                </a>
               </div>
             </form>
             <div class="mt-6 text-center text-xs sm:text-sm text-gray-500">
@@ -145,8 +146,8 @@
           </section>
         </div>
       </div>
-      <div></div>
+      <script src="./Email.js"></script>
+      <script src="./verify.js"></script>
     </section>
-    <script src="./Email.js"></script>
   </body>
 </html>

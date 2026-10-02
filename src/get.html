@@ -67,6 +67,8 @@
             class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md mx-auto"
           >
             <h3 class="text-green-600 font-bold text-3xl mb-6">Register</h3>
+
+            <!-- FORM STARTS HERE -->
             <form id="register-form" class="space-y-4">
               <div>
                 <label class="block text-sm font-medium text-gray-700 mb-1"
@@ -75,6 +77,7 @@
                 <input
                   type="text"
                   name="Name"
+                  id="user-name-input"
                   placeholder="Enter name here"
                   required
                   class="w-full px-4 py-3 rounded-xl border border-gray-300 text-black placeholder-gray-400 focus:outline-none focus:border-green-500"
@@ -86,6 +89,7 @@
                 >
                 <input
                   type="email"
+                  id="user-email-input"
                   name="Email"
                   placeholder="Enter your Email"
                   required
@@ -133,12 +137,12 @@
                 </label>
               </div>
               <div class="pt-4">
-                <a
-                  href="./Email1.html"
+                <button
+                  type="submit"
                   class="block w-full rounded-xl bg-green-500 py-3.5 text-white font-medium hover:bg-green-600 shadow-md transition-colors text-center cursor-pointer"
                 >
                   Register
-                </a>
+                </button>
               </div>
             </form>
             <p class="mt-6 text-center text-sm text-gray-600">
@@ -153,7 +157,36 @@
         </div>
       </div>
     </section>
-    <script src="./get.js"></script>
-    <script src="./Email.js"></script>
+
+    <!-- BULLETPROOF VALIDATION SCRIPT -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const registerForm = document.getElementById("register-form");
+
+        if (registerForm) {
+          registerForm.addEventListener("submit", (e) => {
+            // Check if all fields & checkbox are valid
+            if (!registerForm.checkValidity()) {
+              e.preventDefault(); // Stop submission completely
+              alert(
+                "Please fill out this form and accept the terms before registering.",
+              );
+              registerForm.reportValidity();
+              return;
+            }
+
+            // If valid, prevent default momentarily to save email
+            e.preventDefault();
+            const emailInput = document.getElementById("user-email-input");
+            if (emailInput && emailInput.value) {
+              localStorage.setItem("registeredEmail", emailInput.value);
+            }
+
+            // Now safely redirect
+            window.location.href = "./Email1.html";
+          });
+        }
+      });
+    </script>
   </body>
 </html>

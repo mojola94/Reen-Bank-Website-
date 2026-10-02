@@ -64,7 +64,7 @@
               <span>Accounts</span>
             </a>
             <a
-              href=""
+              href="./Trascation.html"
               class="flex items-center space-x-3 px-4 py-3 rounded-xl text-gray-500 hover:bg-gray-50 hover:text-gray-900 transition-colors"
             >
               <svg
@@ -268,11 +268,11 @@
               </div>
 
               <div
-                class="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-white/80 backdrop-blur-sm p-5 rounded-2xl"
+                class="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-green-100 backdrop-blur-sm p-5 rounded-2xl"
               >
                 <div class="flex items-center space-x-3">
                   <div
-                    class="w-10 h-10 bg-green-200 rounded-xl flex items-center justify-center text-green-600 font-bold"
+                    class="w-10 h-10 bg-green-300 rounded-xl flex items-center justify-center text-green-600 font-bold"
                   >
                     rb
                   </div>
@@ -304,32 +304,43 @@
             <div>
               <div class="flex justify-between items-center mb-4">
                 <h3 class="text-lg font-bold text-gray-900">Accounts</h3>
-                <!-- Plus Button with ID -->
                 <button
-                  id="add-account-btn"
-                  class="w-8 h-8 bg-white border border-gray-200 rounded-xl flex items-center justify-center text-gray-600 hover:bg-gray-50 shadow-sm cursor-pointer"
+                  id="open-account-modal-btn"
+                  class="w-8 h-8 bg-white rounded-full shadow-sm flex items-center justify-center text-gray-700 hover:shadow-md transition-all cursor-pointer border border-gray-100"
+                  title="Add Account"
                 >
-                  +
+                  <svg
+                    class="w-4 h-4 text-gray-700"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 4v16m8-8H4"
+                    ></path>
+                  </svg>
                 </button>
               </div>
-              <!-- Accounts Container -->
               <div
                 id="accounts-container"
                 class="grid grid-cols-1 sm:grid-cols-3 gap-4"
               >
-                <div class="bg-white/80 p-5 rounded-2xl shadow-sm">
+                <div class="bg-green-100 p-5 rounded-2xl shadow-sm">
                   <p class="text-xs text-gray-500 font-medium mb-2">
                     Main Account
                   </p>
                   <p class="text-xl font-bold text-gray-900">₦ 44,500.00</p>
                 </div>
-                <div class="bg-white/80 p-5 rounded-2xl shadow-sm">
+                <div class="bg-green-100 p-5 rounded-2xl shadow-sm">
                   <p class="text-xs text-gray-500 font-medium mb-2">
                     School Savings
                   </p>
                   <p class="text-xl font-bold text-gray-900">₦ 44,500.00</p>
                 </div>
-                <div class="bg-white/80 p-5 rounded-2xl shadow-sm">
+                <div class="bg-green-100 p-5 rounded-2xl shadow-sm">
                   <p class="text-xs text-gray-500 font-medium mb-2">
                     Holiday Plan
                   </p>
@@ -342,7 +353,7 @@
               <div class="flex justify-between items-center mb-6">
                 <h3 class="text-lg font-bold text-gray-900">Statistics</h3>
                 <div
-                  class="bg-gray-50 px-3 py-1.5 rounded-xl text-xs font-medium text-gray-600 flex items-center space-x-1 border border-gray-100"
+                  class="bg-white/60 px-3 py-1.5 rounded-xl text-xs font-medium text-gray-600 flex items-center space-x-1 border border-gray-100"
                 >
                   <select
                     id="year-select"
@@ -410,7 +421,7 @@
           </div>
 
           <div class="space-y-8">
-            <div class="bg-white p-6 rounded-3xl shadow-sm">
+            <div class="p-6 rounded-3xl shadow-sm">
               <div class="flex justify-between items-center mb-6">
                 <h3 class="text-lg font-bold text-gray-900">Transactions</h3>
                 <a href="#" class="text-green-600 hover:opacity-80">
@@ -435,17 +446,17 @@
                   class="flex items-center justify-between text-sm py-2 border-b border-gray-50"
                 >
                   <div>
-                    <p class="font-bold text-gray-800">Oluwaben Jamin</p>
-                    <p class="text-xs text-gray-400">06.Mar.2023 - 09:39</p>
+                    <p class="font-bold text-gray-800">Mercy Okotoobo</p>
+                    <p class="text-xs text-gray-400">01.Oct.2026 - 11:45</p>
                   </div>
-                  <span class="font-bold text-red-500">-10,000.00</span>
+                  <span class="font-bold text-red-500">-110,000.00</span>
                 </div>
                 <div
                   class="flex items-center justify-between text-sm py-2 border-b border-gray-50"
                 >
                   <div>
                     <p class="font-bold text-gray-800">Oluwaben Jamin</p>
-                    <p class="text-xs text-gray-400">06.Mar.2023 - 09:39</p>
+                    <p class="text-xs text-gray-400">23.Aug.2026 - 13:45</p>
                   </div>
                   <span class="font-bold text-green-500">+10,000.00</span>
                 </div>
@@ -453,26 +464,33 @@
                   class="flex items-center justify-between text-sm py-2 border-b border-gray-50"
                 >
                   <div>
-                    <p class="font-bold text-gray-800">Oluwaben Jamin</p>
-                    <p class="text-xs text-gray-400">06.Mar.2023 - 09:39</p>
+                    <p class="font-bold text-gray-800">Abiola Samuel</p>
+                    <p class="text-xs text-gray-400">25.Aug.2026 - 19:25</p>
                   </div>
-                  <span class="font-bold text-red-500">-10,000.00</span>
+                  <span class="font-bold text-red-500">-150,000.00</span>
                 </div>
                 <div
                   class="flex items-center justify-between text-sm py-2 border-b border-gray-50"
                 >
                   <div>
-                    <p class="font-bold text-gray-800">Oluwaben Jamin</p>
-                    <p class="text-xs text-gray-400">06.Mar.2023 - 09:39</p>
+                    <p class="font-bold text-gray-800">Miracle Adeyemo</p>
+                    <p class="text-xs text-gray-400">20.Aug.2026 - 21:56</p>
                   </div>
-                  <span class="font-bold text-green-500">+10,000.00</span>
+                  <span class="font-bold text-red-500">-100,000.00</span>
                 </div>
                 <div class="flex items-center justify-between text-sm py-2">
                   <div>
-                    <p class="font-bold text-gray-800">Oluwaben Jamin</p>
-                    <p class="text-xs text-gray-400">06.Mar.2023 - 09:39</p>
+                    <p class="font-bold text-gray-800">Deborah Ojenike</p>
+                    <p class="text-xs text-gray-400">10.Aug.2026 - 12:30</p>
                   </div>
-                  <span class="font-bold text-red-500">-10,000.00</span>
+                  <span class="font-bold text-red-500">-70,000.00</span>
+                </div>
+                <div class="flex items-center justify-between text-sm py-2">
+                  <div>
+                    <p class="font-bold text-gray-800">Success Joseph</p>
+                    <p class="text-xs text-gray-400">06.Jul.2026 - 09:39</p>
+                  </div>
+                  <span class="font-bold text-green-500">+250,000.00</span>
                 </div>
               </div>
             </div>

@@ -1,14 +1,25 @@
 const registerForm = document.getElementById("register-form");
 
-registerForm.addEventListener("submit", (e) => {
-  e.preventDefault(); // Stop the form from traditional refreshing
+if (registerForm) {
+  registerForm.addEventListener("submit", (e) => {
+    e.preventDefault(); // Stop automatic navigation
 
-  // Check if all required inputs and checkboxes are filled
-  if (registerForm.checkValidity()) {
-    // If everything is filled, redirect to the verification page
-    window.location.href = "./verify.html";
-  } else {
-    // If empty, trigger the browser's native popup warnings
-    registerForm.reportValidity();
-  }
-});
+    // 1. Check if all required inputs and checkboxes are filled
+    if (registerForm.checkValidity()) {
+      // 2. Save the entered email to localStorage
+      const emailInput = document.getElementById("user-email-input");
+      if (emailInput && emailInput.value) {
+        localStorage.setItem("registeredEmail", emailInput.value);
+      }
+
+      // 3. Redirect to the verification page
+      window.location.href = "./Email1.html";
+    } else {
+      // 4. Show custom warning message and browser highlights
+      alert(
+        "Please fill out all required fields and accept the terms to register.",
+      );
+      registerForm.reportValidity();
+    }
+  });
+}

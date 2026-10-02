@@ -4,7 +4,7 @@ const incomeEl = document.getElementById("income-val");
 const expenseEl = document.getElementById("expense-val");
 
 let isHidden = false;
-let realBalance = 133500.0; // Track total numerically
+let realBalance = 0;
 const realIncome = incomeEl.innerText;
 const realExpense = expenseEl.innerText;
 
@@ -30,8 +30,6 @@ toggleBtn.addEventListener("click", () => {
     expenseEl.innerText = realExpense;
   }
 });
-
-// 2. Month, Date, and Year Selector Script
 const monthSelect = document.getElementById("month-select");
 const daySelect = document.getElementById("day-select");
 const yearSelect = document.getElementById("year-select");
@@ -63,8 +61,6 @@ yearSelect.addEventListener("change", updateDays);
 
 updateDays();
 daySelect.value = "6";
-
-// 3. Dynamic Account Creation Modal Script
 const addAccountBtn = document.getElementById("add-account-btn");
 const accountModal = document.getElementById("account-modal");
 const cancelModalBtn = document.getElementById("cancel-modal-btn");
@@ -96,17 +92,57 @@ accountForm.addEventListener("submit", (e) => {
             <p class="text-xs text-gray-500 font-medium mb-2">${name}</p>
             <p class="text-xl font-bold text-gray-900">${formatCurrency(amount)}</p>
           `;
-
     accountsContainer.appendChild(card);
-
-    // Update total current balance
     realBalance += amount;
     if (!isHidden) {
       currentBalanceEl.innerText = formatCurrency(realBalance);
     }
-
-    // Close modal and reset form
     accountModal.classList.add("hidden");
     accountForm.reset();
   }
+});
+// Handle New Account Creation
+accountForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const name = newAccountNameInput.value.trim();
+  const initialBal = parseFloat(newAccountBalanceInput.value) || 0;
+  if (!name) return;
+
+  const formattedBal =
+    "₦ " +
+    initialBal.toLocaleString("en-US", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+
+  const newCard = document.createElement("div");
+  newCard.className =
+    "bg-[#dcfce7] p-6 rounded-3xl shadow-sm flex flex-col justify-between account-card";
+  newCard.innerHTML = `
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <p class="text-sm font-semibold text-purple-900 account-name">${name}</p>
+              <svg class="w-4 h-4 text-gray-600 cursor-pointer" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+              </svg>
+            </div>
+            <p class="account-balance text-2xl font-bold text-gray-900 tracking-tight mb-6">${formattedBal}</p>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <button class="fund-btn py-2.5 px-3 bg-emerald-500 text-white rounded-xl font-medium text-sm hover:bg-emerald-600 shadow-sm transition-all cursor-pointer flex items-center justify-center space-x-1">
+              <span>Fund</span>
+            </button>
+            <button class="withdraw-btn py-2.5 px-3 bg-gray-300 text-gray-700 rounded-xl font-medium text-sm hover:bg-gray-400 shadow-sm transition-all cursor-pointer flex items-center justify-center space-x-1">
+              <span>Withdraw</span>
+            </button>
+          </div>
+        `;
+
+  // 👇 ADD THIS LINE TO INSERT THE CARD INTO THE GRID
+  accountsGrid.appendChild(newCard);
+
+  // (Optional) Reset form & close modal after appending
+  accountForm.reset();
+  // accountModal.classList.add('hidden');
 });

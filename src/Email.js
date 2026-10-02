@@ -1,9 +1,23 @@
+function maskEmail(email) {
+  if (!email || !email.includes("@")) return email;
+
+  const [name, domain] = email.split("@");
+  if (name.length <= 2) {
+    return `${name[0]}***@${domain}`;
+  }
+
+  const firstTwo = name.slice(0, 2);
+  const lastTwo = name.slice(-2);
+  return `${firstTwo}***${lastTwo}@${domain}`;
+}
+
+// 1. Load and Mask Email from LocalStorage
 document.addEventListener("DOMContentLoaded", () => {
   const emailElement = document.getElementById("user-email");
   const savedEmail = localStorage.getItem("registeredEmail");
 
   if (savedEmail && emailElement) {
-    emailElement.textContent = savedEmail;
+    emailElement.textContent = maskEmail(savedEmail);
   }
 });
 
