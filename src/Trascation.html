@@ -5,14 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Transactions</title>
     <link rel="stylesheet" href="./output.css" />
+    <script src="./mobile-nav.js" defer></script>
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
   <body
     class="font-sans m-0 p-0 text-gray-800 min-h-screen flex flex-col"
     style="background-image: url(&quot;./Assests/image/register (1).png&quot;)"
   >
-    <div class="flex flex-1">
+    <div class="app-layout flex flex-1">
+      <button
+        class="mobile-nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="dashboard-sidebar"
+        aria-label="Open dashboard navigation"
+      >
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      <img
+        class="mobile-brand"
+        src="./Assests/image/logo.png"
+        alt="Reen-Bank Logo"
+      />
       <aside
+        id="dashboard-sidebar"
         class="w-64 border-r border-gray-200/60 flex flex-col justify-between p-6 hidden md:flex"
       >
         <div>
@@ -45,7 +63,7 @@
             </a>
             <a
               href="./account2.html"
-              class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-white text-emerald-600 font-medium shadow-sm"
+              class="flex items-center space-x-3 px-4 py-3 rounded-xl text-gray-500 hover:bg-white/60 hover:text-gray-900 transition-colors"
             >
               <svg
                 class="w-5 h-5"
@@ -63,8 +81,9 @@
               <span>Accounts</span>
             </a>
             <a
-              href="./Trascation2.html"
-              class="flex items-center space-x-3 px-4 py-3 rounded-xl text-gray-500 hover:bg-white/60 hover:text-gray-900 transition-colors"
+              href="./Trascation.html"
+              aria-current="page"
+              class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-white text-emerald-600 font-medium shadow-sm"
             >
               <svg
                 class="w-5 h-5"
@@ -127,11 +146,11 @@
 
       <main class="flex-1 p-8 overflow-y-auto">
         <header
-          class="flex flex-col md:flex-row md:items-center justify-between pb-8 mb-8 border-b border-gray-200/60 gap-4"
+          class="flex items-center justify-between pb-4 mb-5 md:pb-8 md:mb-8 border-b border-gray-200/60 gap-3"
         >
           <h1 class="text-3xl font-bold text-gray-900">Transactions</h1>
 
-          <div class="flex items-center space-x-6">
+          <div class="flex items-center gap-2 sm:gap-4">
             <div class="text-right hidden sm:block">
               <p class="text-2xl font-bold text-emerald-600">Joseph</p>
               <p class="text-lg font-bold text-gray-900 tracking-wider">
@@ -160,7 +179,7 @@
                 type="text"
                 id="search-input"
                 placeholder="Search accounts..."
-                class="pl-9 pr-4 py-2 rounded-xl text-sm border border-gray-200 focus:outline-none focus:border-emerald-500 w-48 md:w-64 shadow-sm"
+                class="pl-9 pr-4 py-2 rounded-xl text-sm border border-gray-200 focus:outline-none focus:border-emerald-500 w-28 sm:w-48 md:w-64 shadow-sm"
               />
             </div>
             <div class="relative">

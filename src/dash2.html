@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <!-- <link rel="stylesheet" href="./output.css" /> -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./output.css" />
+    <script src="./mobile-nav.js" defer></script>
   </head>
   <body
     class="font-sans m-0 p-0 text-gray-800"
@@ -13,9 +13,26 @@
       background-image: url(&quot;./Assests/image/register\ \(1\).png&quot;);
     "
   >
-    <div class="flex min-h-screen">
+    <div class="app-layout flex min-h-screen">
+      <button
+        class="mobile-nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="dashboard-sidebar"
+        aria-label="Open dashboard navigation"
+      >
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      <img
+        class="mobile-brand"
+        src="./Assests/image/logo.png"
+        alt="Reen-Bank Logo"
+      />
       <!-- Sidebar -->
       <aside
+        id="dashboard-sidebar"
         class="w-64 border-r border-gray-100 flex flex-col justify-between p-6 hidden md:flex"
         style="
           background-image: url(&quot;./Assests/image/register\ \(1\).png&quot;);
@@ -28,6 +45,7 @@
           <nav class="space-y-2">
             <a
               href="./dash2.html"
+              aria-current="page"
               class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-green-50 text-green-600 font-medium"
             >
               <svg
@@ -130,12 +148,12 @@
       <!-- Main Content -->
       <main class="flex-1 p-6 md:p-10 overflow-y-auto">
         <header
-          class="flex flex-col md:flex-row md:items-center justify-between pb-8 border-b border-gray-200/60 gap-4"
+          class="flex items-center justify-between pb-4 md:pb-8 border-b border-gray-200/60 gap-3"
         >
           <div>
             <h1 class="text-2xl font-bold text-gray-900">Overview</h1>
           </div>
-          <div class="flex items-center space-x-6">
+          <div class="flex items-center gap-2 sm:gap-4">
             <div class="text-right hidden sm:block">
               <p class="text-2xl text-green-400 font-medium">Joseph</p>
               <p class="text-2xl font-bold text-gray-900 tracking-wider">
@@ -164,7 +182,7 @@
                 type="text"
                 id="search-input"
                 placeholder="Search..."
-                class="pl-9 pr-4 py-2 bg-white/60 rounded-xl text-sm border border-gray-200 focus:outline-none focus:border-green-500 w-48 md:w-64"
+                class="pl-9 pr-4 py-2 bg-white/60 rounded-xl text-sm border border-gray-200 focus:outline-none focus:border-green-500 w-28 sm:w-48 md:w-64"
               />
             </div>
             <button

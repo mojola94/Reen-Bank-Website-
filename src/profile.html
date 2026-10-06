@@ -4,15 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./output.css" />
+    <script src="./mobile-nav.js" defer></script>
   </head>
 
   <body
     class="m-0 font-sans text-[#252525]"
     style="background-image: url(&quot;./Assests/image/register (1).png&quot;)"
   >
-    <div class="flex flex-1">
+    <div class="app-layout flex flex-1">
+      <button
+        class="mobile-nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="dashboard-sidebar"
+        aria-label="Open dashboard navigation"
+      >
+        <svg
+          class="h-5 w-5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+      <img
+        class="mobile-brand"
+        src="./Assests/image/logo.png"
+        alt="Reen-Bank Logo"
+      />
       <aside
+        id="dashboard-sidebar"
         class="w-64 border-r border-gray-200/60 flex flex-col justify-between p-6 hidden md:flex"
       >
         <div>
@@ -44,8 +73,8 @@
               <span>Overview</span>
             </a>
             <a
-              href="./account2.html"
-              class="flex items-center space-x-3 px-4 py-3 rounded-xl text-emerald-600 font-medium shadow-sm"
+              href="./account.html"
+              class="flex items-center space-x-3 px-4 py-3 rounded-xl text-gray-500 hover:bg-white/60 hover:text-gray-900 transition-colors"
             >
               <svg
                 class="w-5 h-5"
@@ -82,8 +111,9 @@
               <span>Transactions</span>
             </a>
             <a
-              href="#"
-              class="flex items-center space-x-3 px-4 py-3 rounded-xl text-gray-500 hover:bg-white/60 hover:text-gray-900 transition-colors"
+              href="./profile.html"
+              aria-current="page"
+              class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-white text-emerald-600 font-medium shadow-sm"
             >
               <svg
                 class="w-5 h-5"
@@ -132,13 +162,6 @@
           class="flex min-h-[76px] items-center justify-between gap-3 border-b border-gray-100 px-4 sm:px-8"
         >
           <div class="flex items-center gap-3">
-            <button
-              id="menuBtn"
-              class="text-xl md:hidden"
-              aria-label="Open menu"
-            >
-              ☰
-            </button>
             <h1 class="text-lg font-semibold">Profile</h1>
           </div>
 
@@ -244,7 +267,7 @@
               <div class="relative">
                 <button
                   id="photoBtn"
-                  class="absolute bottom-0 right-0 rounded-full bg-gray-200 px-2 py-1 text-xs"
+                  class="absolute right-0 top-0 rounded-full bg-gray-200 px-2 py-1 text-xs"
                   title="Change profile picture"
                 >
                   ✎
@@ -279,13 +302,21 @@
                 <label for="email" class="block text-xs text-emerald-600">
                   Email
                 </label>
-                <input
-                  id="email"
-                  type="email"
-                  required
-                  value="jsuccess504@gmail.com"
-                  class="profile-input"
-                />
+                <div class="relative">
+                  <img
+                    src="./Assests/image/fi-rr-envelope.png"
+                    alt=""
+                    aria-hidden="true"
+                    class="pointer-events-none absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 object-contain"
+                  />
+                  <input
+                    id="email"
+                    type="email"
+                    required
+                    value="jsuccess504@gmail.com"
+                    class="profile-input pl-11"
+                  />
+                </div>
               </div>
 
               <div>
@@ -358,7 +389,7 @@
             </div>
 
             <div class="space-y-8">
-              <div class="p-6 rounded-3xl shadow-sm bg-white">
+              <div class="p-6 rounded-3xl shadow-sm">
                 <div class="flex justify-between items-center mb-6">
                   <h3 class="text-lg font-bold text-gray-900">Transactions</h3>
                   <a href="#" class="text-green-600 hover:opacity-80">
@@ -380,7 +411,7 @@
 
                 <div class="space-y-4">
                   <div
-                    class="flex items-center justify-between text-sm py-2 border-b border-gray-50"
+                    class="flex items-center justify-between text-sm py-2 border-b"
                   >
                     <div>
                       <p class="font-bold text-gray-800">Mercy Okotoobo</p>
