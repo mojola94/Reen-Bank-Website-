@@ -3,14 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trascation</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Transactions</title>
+    <link rel="stylesheet" href="./output.css" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
   <body
     class="font-sans m-0 p-0 text-gray-800 min-h-screen flex flex-col"
-    style="
-      background-image: url(&quot;./Assests/image/register\ \(1\).png&quot;);
-    "
+    style="background-image: url(&quot;./Assests/image/register (1).png&quot;)"
   >
     <div class="flex flex-1">
       <aside
@@ -26,7 +25,7 @@
           </div>
           <nav class="space-y-2">
             <a
-              href="./dash.html"
+              href="./dash2.html"
               class="flex items-center space-x-3 px-4 py-3 rounded-xl text-gray-500 hover:bg-white/60 hover:text-gray-900 transition-colors"
             >
               <svg
@@ -45,7 +44,7 @@
               <span>Overview</span>
             </a>
             <a
-              href="./account.html"
+              href="./account2.html"
               class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-white text-emerald-600 font-medium shadow-sm"
             >
               <svg
@@ -64,7 +63,7 @@
               <span>Accounts</span>
             </a>
             <a
-              href="./Trascation.html"
+              href="./Trascation2.html"
               class="flex items-center space-x-3 px-4 py-3 rounded-xl text-gray-500 hover:bg-white/60 hover:text-gray-900 transition-colors"
             >
               <svg
@@ -83,7 +82,7 @@
               <span>Transactions</span>
             </a>
             <a
-              href="#"
+              href="./profile.html"
               class="flex items-center space-x-3 px-4 py-3 rounded-xl text-gray-500 hover:bg-white/60 hover:text-gray-900 transition-colors"
             >
               <svg
@@ -185,8 +184,7 @@
                 <span
                   id="notification-badge"
                   class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-white shadow-sm"
-                  >1</span
-                >
+                ></span>
               </button>
               <div
                 id="notification-dropdown"
@@ -328,9 +326,6 @@
         <div class="shadow-sm p-6 border border-green-100">
           <div class="flex justify-between items-center mb-6">
             <h3 class="text-lg font-bold text-gray-900">Transactions</h3>
-            <h3
-              class="text-lg font-bold text-green-500 hover:underline cursor-pointer"
-            ></h3>
             <button
               id="view-all-btn"
               class="text-emerald-600 hover:opacity-80 text-sm font-medium flex items-center space-x-1 cursor-pointer bg-transparent border-none"
@@ -352,11 +347,9 @@
             </button>
           </div>
           <div class="overflow-x-auto">
-            <table class="w-full text-left md: border-collapse">
+            <table class="w-full text-left border-collapse">
               <thead>
-                <tr
-                  class="text-xs text-gray-400 border-b border-gray-100 md: pb-3"
-                >
+                <tr class="text-xs text-gray-400 border-b border-gray-100 pb-3">
                   <th class="pb-3 font-medium">Type</th>
                   <th class="pb-3 font-medium">Name</th>
                   <th class="pb-3 font-medium">Method / Account</th>
@@ -392,7 +385,7 @@
                     >
                   </td>
                 </tr>
-                <tr class="hover:bg-green-200 md: transition-colors">
+                <tr class="hover:bg-green-200 transition-colors">
                   <td class="py-4">
                     <div
                       class="w-8 h-8 rounded-full bg-green-400 text-white flex items-center justify-center font-bold text-base"
@@ -517,6 +510,6 @@
         </div>
       </main>
     </div>
-    <script src="./account.js"></script>
+    <script src="./trasaction.js"></script>
   </body>
 </html>

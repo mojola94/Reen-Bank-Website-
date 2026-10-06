@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reen-Bank</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./output.css" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
   <body>
     <section class="bg-green-100 px-4 py-4 md:px-20">
@@ -170,67 +171,21 @@
         </div>
       </div>
     </section>
-    <section class="bg-green-100 py-16 px-4 md:px-24">
-      <div class="mb-8">
-        <h2 class="text-5xl text-black font-bold">FAQs</h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-        <div class="space-y-6">
-          <div
-            class="text-3xl md:text-4xl text-green-600 font-semibold underline"
-          >
-            <a href="#"
-              >How do I sign up for an account with <br />
-              Reen Bank?</a
-            >
+    <section id="faq" class="bg-green-100 py-16 px-4 md:px-24">
+      <div class="relative mx-auto max-w-367.5">
+        <h2 class="mb-16 text-4xl font-semibold">FAQs</h2>
+        <div class="grid gap-14 lg:grid-cols-[1.4fr_1fr]">
+          <div aria-live="polite">
+            <h3
+              id="faq-title"
+              class="mb-10 max-w-xl text-3xl font-semibold text-[#30b38b] underline underline-offset-4"
+            ></h3>
+            <p
+              id="faq-answer"
+              class="max-w-2xl text-lg leading-relaxed text-neutral-600"
+            ></p>
           </div>
-          <div class="text-gray-600 text-base md: leading-relaxed">
-            <p>
-              You can sign up for an account with Reen Bank online by visiting
-              our website <br />
-              and filling out the online application form. Once your application
-              is approved, <br />
-              you will receive instructions for setting up your account and
-              accessing our <br />
-              online banking platform.
-            </p>
-          </div>
-        </div>
-        <div class="space-y-6 text-blue-500 font-medium text-lg">
-          <div
-            class="flex items-center justify-between border-b border-gray-300 pb-4"
-          >
-            <a href="#" class="underline hover:text-blue-500"
-              >What types of accounts does Reen Bank offer?</a
-            >
-            <span class="ml-4">&rarr;</span>
-          </div>
-          <div
-            class="flex items-center justify-between border-b border-gray-300 pb-4"
-          >
-            <a href="#" class="underline hover:text-blue-500"
-              >Is Reen Bank FDIC insured?</a
-            >
-            <span class="ml-4">&rarr;</span>
-          </div>
-          <div
-            class="flex items-center justify-between border-b border-gray-300 pb-4"
-          >
-            <a href="#" class="underline hover:text-blue-500"
-              >How can I access my Reen Bank account online?</a
-            >
-            <span class="ml-4">&rarr;</span>
-          </div>
-          <div
-            class="flex items-center justify-between border-b border-gray-300 pb-4"
-          >
-            <a href="#" class="underline hover:text-blue-500"
-              >What security measures does Reen Bank have in place to protect my
-              financial information?</a
-            >
-            <span class="ml-4">&rarr;</span>
-          </div>
+          <div id="faq-list" class="flex flex-col gap-8"></div>
         </div>
       </div>
     </section>
@@ -349,7 +304,6 @@
               and Get Started Now
             </h2>
           </div>
-          <!-- Removed the stray '>' bracket here -->
           <div class="flex flex-col sm:flex-row gap-3 pt-6">
             <input
               type="email"
@@ -365,6 +319,7 @@
         </div>
       </div>
     </section>
+    <script src="./script.js"></script>
     <script src="./dash.js"></script>
     <script src="./Email.js"></script>
     <script src="./get.js"></script>
